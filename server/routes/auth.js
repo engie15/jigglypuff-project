@@ -4,8 +4,8 @@ var {userExists, createUser} = require('../db/users')
 
 var token = require('../auth/token')
 
-router.post('/register', register)
-// router.post('/register', register, token.issue) - need to update the token.js file in the auth folder before this line will work.
+// router.post('/register', register)
+router.post('/register', register, token.issue) //- need to update the token.js file in the auth folder before this line will work.
 
 function register (req, res, next) {
     const {name, password} = req.body

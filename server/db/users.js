@@ -30,7 +30,7 @@ function userExists (name, testConn) {
 function getUserByName (name, testConn) {
     const db = testConn || connection
     return db('Users')
-    .where('name', name)
+    .where('name', name).first()
 }
 
 module.exports = {
