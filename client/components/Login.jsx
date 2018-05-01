@@ -6,7 +6,7 @@ class Login extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      user_name: '',
+      name: '',
       password: ''
     }
     this.handleFormData = this.handleFormData.bind(this)
@@ -22,7 +22,7 @@ class Login extends React.Component {
   handleSubmit (event) {
     event.preventDefault()
     // ~*~ Passing username and password into this.state
-    let {user_name, password} = this.state  
+    let {name, password} = this.state  
 
     // ~*~ Passing username and password data into props 
     // CHECK: name of action to match what Steve makes
@@ -35,7 +35,7 @@ class Login extends React.Component {
         <h1><strong>Login</strong></h1>
         <form onSubmit = {this.handleSubmit}>
           <label>Username:
-            <input type = 'text' name = 'user_name' onChange = {this.handleFormData} />
+            <input type = 'text' name = 'name' onChange = {this.handleFormData} />
           </label>
           <label>Password:
             {/* CHECK: Where does this password type come in? Is this how it knows to hash and hide the password as it's being typed into the input box? */}

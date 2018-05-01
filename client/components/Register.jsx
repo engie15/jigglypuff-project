@@ -6,7 +6,7 @@ class Register extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      user_name: '',
+      name: '',
       password: '',
       confirm_password: ''
     }
@@ -22,10 +22,10 @@ class Register extends React.Component {
 
   handleSubmit (event) {
     event.preventDefault()
-    event.target.reset()  // CHECK: Where does this reset() function live?
+    event.target.reset()  // CHECK: This resets the input fields to blank following submit.
 
     // ~*~ Passing username and password into this.state
-    let {user_name, password, confirm_password} = this.state  
+    let {name, password, confirm_password} = this.state  
 
     // ~*~ Passing username and password data into props, only if password and confirm_password match though.
     // CHECK: name of action to match what Steve makes
@@ -38,7 +38,7 @@ class Register extends React.Component {
         <h1><strong>Register</strong></h1>
         <form onSubmit = {this.handleSubmit}>
           <label>Username:
-            <input type = 'text' name = 'user_name' onChange = {this.handleFormData} />
+            <input type = 'text' name = 'name' onChange = {this.handleFormData} />
           </label>
           <label>Password:
             <input type = 'password' name = 'password' onChange = {this.handleFormData} /> 

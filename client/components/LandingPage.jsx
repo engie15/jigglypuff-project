@@ -10,9 +10,13 @@ import {logoutUser} from '../actions/logout' // CHECK: name of action and file t
 const LandingPage = () => (
     <div>
       {props.auth.isAuthenticated  // CHECK: name of prop matches action that Steve makes
-        // ~*~ If is logged in, show button to logout ~*~
-        ? <button onClick = {() => props.dispatch(logoutUser())}> Logout </button>  // CHECK: name of action
-        
+        // ~*~ If is logged in, show the Jigglypuff component and the button to logout ~*~
+        ? <div>
+            <Jigglepuff />
+            {/* CHECK: name of action for logoutUser */}
+            <button onClick = {() => props.dispatch(logoutUser())}> Logout </button>  
+          </div>
+          
         // ~*~ If not logged in, show buttons to login or register ~*~
         : <div>
             <h1>Login or register to view all the jigglypuffing goodness that you never knew you needed</h1>
