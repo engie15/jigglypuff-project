@@ -1,5 +1,9 @@
-import {combineReducers} from 'redux'
+import { combineReducers } from 'redux'
+
+import auth from './current-page'
+import jigglepuff from './jiggle'
 
 export default combineReducers({
-  // some things
+  auth,
+  jiggle
 })
