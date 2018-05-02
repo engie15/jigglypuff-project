@@ -37,12 +37,12 @@ class Jigglypuff extends React.Component {
             {/* <p>Play song is true</p> */}
             <Sound url='/sounds/JIGGLYPUFFSONG.mp3' playStatus={Sound.status.PLAYING} />
             <img className = 'dancing' src='/images/jigglypuff.png'/>
-            <button onClick = {this.stop}>Stop !!</button>
+            <button className="button is-large is-dark" onClick = {this.stop}>Stop !!</button>
           </div>
         : <div>
             {/* <p>Play song is false</p> */}
             <img className = 'notDancing' src='/images/jigglypuff.png'/>
-            <button onClick = {this.play}>Play !!</button>
+            <button className="button is-large is-danger" onClick = {this.play}>Play !!</button>
           </div>
     }
   </div>
