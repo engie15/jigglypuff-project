@@ -37,15 +37,17 @@ class Register extends React.Component {
         <h1><strong>Register</strong></h1>
         <form onSubmit = {this.handleSubmit}>
           <label>Username:
-            <input type = 'text' name = 'name' onChange = {this.handleFormData} />
+            <input className="input is-normal" type = 'text' name = 'name' onChange = {this.handleFormData} />
           </label>
           <label>Password:
-            <input type = 'password' name = 'password' onChange = {this.handleFormData} /> 
+            <input className="input is-normal" type = 'password' name = 'password' onChange = {this.handleFormData} /> 
           </label>
           <label>Confirm password:
-            <input type = 'password' name = 'confirm_password' onChange = {this.handleFormData} /> 
+            <input className="input is-normal" type = 'password' name = 'confirm_password' onChange = {this.handleFormData} /> 
           </label>
-          <input type = 'submit'/>
+          <br/>
+          <br/>
+          <input className="button is-light" type = 'submit'/>
         </form>
       </React.Fragment>
     )

@@ -37,11 +37,13 @@ class Login extends React.Component {
         <h1><strong>Login</strong></h1>
         <form onSubmit = {this.handleSubmit}>
           <label>Username:
-            <input type = 'text' name = 'name' onChange = {this.handleFormData} />
+            <input className="input is-normal" type = 'text' name = 'name' onChange = {this.handleFormData} />
           </label>
           <label>Password:
-            <input type = 'password' name = 'password' onChange = {this.handleFormData} /> 
+            <input className="input is-normal" type = 'password' name = 'password' onChange = {this.handleFormData} /> 
           </label>
+          <br/>
+          <br/>
           <input type = 'submit'/>
         </form>
       </React.Fragment>
