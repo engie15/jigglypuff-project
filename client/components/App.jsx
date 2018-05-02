@@ -10,7 +10,15 @@ import Register from './Register'
 const App = () => (
   <Router>
     <div>
-      <h1>Having Trouble Sleeping??</h1>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-centered">
+            Having trouble sleeping?
+          </h1>
+        </div>
+      </div>
+    </section>
       <Route path = '/' component = {LandingPage} />
       <Route path = '/login' component = {Login} />
       <Route path = '/register' component = {Register} /> 

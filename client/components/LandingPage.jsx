@@ -21,9 +21,14 @@ const LandingPage = (props) => {
           
         // ~*~ If not logged in, show buttons to login or register ~*~
         : <div>
-            <h1>Login or register to view all the jigglypuffing goodness that you never knew you needed</h1>
-            <Link to = '/login'> Login </Link>
-            <Link to = '/register'> Register </Link>
+            <div class="field is-grouped">
+              <p class="control">
+              <Link to = '/login'> <a className="button is-large">Login</a> </Link>
+              </p>
+              <p class="control">
+              <Link to = '/register'> <a className="button is-large">Register</a> </Link>
+              </p>
+            </div>
           </div>
       }
     </div>
