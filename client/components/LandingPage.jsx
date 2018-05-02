@@ -6,7 +6,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logoutUser} from '../actions/logout' 
-import Jigglypuff from './Jigglypuff'
+// import Jigglypuff from './Jigglypuff'
 
 const LandingPage = (props) => {
   console.log(props.auth)
@@ -15,7 +15,7 @@ const LandingPage = (props) => {
       {props.auth.isAuthenticated  
         // ~*~ If is logged in, show the Jigglypuff component and the button to logout ~*~
         ? <div>
-            <Jigglypuff />
+            {/* <Jigglypuff /> */}
             <button onClick = {() => props.dispatch(logoutUser())}> Logout </button>  
           </div>
           
@@ -34,4 +34,4 @@ const mapStateToProps = ({auth}) => {
   return {auth}
 }
 
-export default connect(mapStateToProps) (LandingPage)
+export default connect(mapStateToProps)(LandingPage)
