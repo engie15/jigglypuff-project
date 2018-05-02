@@ -44,7 +44,7 @@ class Login extends React.Component {
           </label>
           <br/>
           <br/>
-          <input type = 'submit'/>
+          <input className="button is-light" type = 'submit'/>
         </form>
       </React.Fragment>
     )
