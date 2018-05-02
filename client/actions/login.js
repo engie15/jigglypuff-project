@@ -31,7 +31,7 @@ function loginError (message) {
 export function loginUser (creds) {
   return dispatch => {
     dispatch(requestLogin(creds))
-    return request('post', 'auth/login', creds)
+    return request('post', 'v1/auth/login', creds)
       .then((response) => {
         if (response.status === 403) {
           alert("Try Again!")

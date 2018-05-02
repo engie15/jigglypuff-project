@@ -5,15 +5,17 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {logoutUser} from '../actions/logout' // CHECK: name of action and file to match what Steve makes
+import {logoutUser} from '../actions/logout' 
+import Jigglypuff from './Jigglypuff'
 
-const LandingPage = () => (
+const LandingPage = (props) => {
+  console.log(props.auth)
+  return( 
     <div>
-      {props.auth.isAuthenticated  // CHECK: name of prop matches action that Steve makes
+      {props.auth.isAuthenticated  
         // ~*~ If is logged in, show the Jigglypuff component and the button to logout ~*~
         ? <div>
-            <Jigglepuff />
-            {/* CHECK: name of action for logoutUser */}
+            <Jigglypuff />
             <button onClick = {() => props.dispatch(logoutUser())}> Logout </button>  
           </div>
           
@@ -25,10 +27,9 @@ const LandingPage = () => (
           </div>
       }
     </div>
-)
+)}
 
 //  ~*~ Take in props info to see if user signed in or not
-// CHECK: This is taking in the current state of whether user is signed in. Want to understand exactly where this sits. Reducer? 
 const mapStateToProps = ({auth}) => { 
   return {auth}
 }

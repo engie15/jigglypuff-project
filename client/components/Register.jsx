@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {registerUserRequest} from '../actions/register' // CHECK: name of action and file to match what Steve makes
+import {registerUserRequest} from '../actions/register' 
 
 class Register extends React.Component {
   constructor(props) {
@@ -22,14 +22,13 @@ class Register extends React.Component {
 
   handleSubmit (event) {
     event.preventDefault()
-    event.target.reset()  // CHECK: This resets the input fields to blank following submit.
+    event.target.reset()  // This resets the input fields to blank following submit.
 
     // ~*~ Passing username and password into this.state
     let {name, password, confirm_password} = this.state  
 
     // ~*~ Passing username and password data into props, only if password and confirm_password match though.
-    // CHECK: name of action to match what Steve makes
-    if (password == confirm_password) this.props.dispatch(registerUser({user_name, password}))
+    if (password == confirm_password) this.props.dispatch(registerUserRequest({name, password}))
   }
 
   render() {
