@@ -14,9 +14,9 @@ const LandingPage = (props) => {
     <div>
       {props.auth.isAuthenticated  
         // ~*~ If is logged in, show the Jigglypuff component and the button to logout ~*~
-        ? <div>
+        ? <div className = "getting-jiggy">
+            <button className="button is-normal is-light" onClick = {() => props.dispatch(logoutUser())}> Logout </button>  
             <Jigglypuff />
-            <button className="button is-large is-black" onClick = {() => props.dispatch(logoutUser())}> Logout </button>  
           </div>
           
         // ~*~ If not logged in, show buttons to login or register ~*~

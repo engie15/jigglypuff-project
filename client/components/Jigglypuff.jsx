@@ -31,17 +31,21 @@ class Jigglypuff extends React.Component {
 
   render (props) {
   return (
-  <div>
+  <div className = "space">
     {this.props.jigglepuff.playSong
-        ? <div>
+        ? <div className="getting-jiggy">
             {/* <p>Play song is true</p> */}
             <Sound url='/sounds/JIGGLYPUFFSONG.mp3' playStatus={Sound.status.PLAYING} />
             <img className = 'dancing' src='/images/jigglypuff.png'/>
+            <br />
+            <br />
             <button className="button is-large is-dark" onClick = {this.stop}>Stop !!</button>
           </div>
-        : <div>
+        : <div className="getting-jiggy">
             {/* <p>Play song is false</p> */}
             <img className = 'notDancing' src='/images/jigglypuff.png'/>
+            <br />
+            <br />
             <button className="button is-large is-danger" onClick = {this.play}>Play !!</button>
           </div>
     }

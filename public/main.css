@@ -7,9 +7,11 @@ html {
 }
 
 .dancing {
-    margin: auto 0;
-    width: 400px;
+    display: flex;
+    margin: auto;
+    width: 30%;
     animation: pulse 5s infinite;
+    padding: 5em;
 }
 
 @keyframes pulse {
@@ -21,7 +23,23 @@ html {
 }
 
 .notDancing {
-    margin: auto 0;
-    width: 400px;
+    width: 30%;
+    display: flex;
+    margin: auto;
+    padding: 10px;
 }
 
+.getting-jiggy {
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+.button.is-normal.is-light {
+    display: flex;
+    margin: auto;
+}
+
+.space {
+    margin: 20px;
+}
