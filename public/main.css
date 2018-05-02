@@ -33,6 +33,17 @@ html {
     position: relative;
     margin: auto;
     text-align: center;
+    background-image: url("https://media.giphy.com/media/i1BSO9P1XjwCk/giphy.gif");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.not-jiggy {
+    position: relative;
+    margin: auto;
+    text-align: center;   
 }
 
 .button.is-normal.is-light {

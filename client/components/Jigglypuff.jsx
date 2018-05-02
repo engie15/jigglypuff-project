@@ -19,7 +19,7 @@ class Jigglypuff extends React.Component {
   play() {
     console.log("hi")
     this.props.dispatch(playSong())
-    
+
     //this.props.dispatch(showAnimation())
   }  
 
@@ -42,7 +42,7 @@ class Jigglypuff extends React.Component {
             <br />
             <button className="button is-large is-dark" onClick = {this.stop}>Stop !!</button>
           </div>
-        : <div className="getting-jiggy">
+        : <div className = "not-jiggy">
             {/* <p>Play song is false</p> */}
             <img className = 'notDancing' src='/images/jigglypuff.png'/>
             <br />
