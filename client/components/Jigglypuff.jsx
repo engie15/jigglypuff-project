@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {playSong, stopSong, showAnimation, hideAnimation} from '../actions/jiggle'
 import Sound from 'react-sound'
+import DancingJigglypuff from './DancingJigglypuff'
 
 
 class Jigglypuff extends React.Component {
@@ -33,14 +34,14 @@ class Jigglypuff extends React.Component {
   <div>
     {this.props.jigglepuff.playSong
         ? <div>
-            <p>Play song is true</p>
+            {/* <p>Play song is true</p> */}
             <Sound url='/sounds/JIGGLYPUFFSONG.mp3' playStatus={Sound.status.PLAYING} />
-            <img className = 'dancing' src='https://orig00.deviantart.net/cc1a/f/2011/294/6/b/singing_jigglypuff_by_davenevanxaviour-d4dhwp3.jpg'/>
+            <img className = 'dancing' src='/images/jigglypuff.png'/>
             <button onClick = {this.stop}>Stop !!</button>
           </div>
         : <div>
-            <p>Play song is false</p>
-            <img className = 'notDancing' src='https://orig00.deviantart.net/cc1a/f/2011/294/6/b/singing_jigglypuff_by_davenevanxaviour-d4dhwp3.jpg'/>
+            {/* <p>Play song is false</p> */}
+            <img className = 'notDancing' src='/images/jigglypuff.png'/>
             <button onClick = {this.play}>Play !!</button>
           </div>
     }
