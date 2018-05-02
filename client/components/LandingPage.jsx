@@ -6,7 +6,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logoutUser} from '../actions/logout' 
-// import Jigglypuff from './Jigglypuff'
+import Jigglypuff from './Jigglypuff'
 
 const LandingPage = (props) => {
   console.log(props.auth)
@@ -15,12 +15,21 @@ const LandingPage = (props) => {
       {props.auth.isAuthenticated  
         // ~*~ If is logged in, show the Jigglypuff component and the button to logout ~*~
         ? <div>
-            {/* <Jigglypuff /> */}
-            <button onClick = {() => props.dispatch(logoutUser())}> Logout </button>  
+            <Jigglypuff />
+            <button className="button is-large is-black" onClick = {() => props.dispatch(logoutUser())}> Logout </button>  
           </div>
           
         // ~*~ If not logged in, show buttons to login or register ~*~
         : <div>
+            <section class="hero">
+              <div class="hero-body">
+                <div class="container">
+                  <h1 class="title is-centered">
+                    Having trouble sleeping?
+                  </h1>
+                </div>
+              </div>
+            </section>
             <div class="field is-grouped">
               <p class="control">
               <Link to = '/login'> <a className="button is-large">Login</a> </Link>
