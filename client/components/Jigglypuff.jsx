@@ -12,13 +12,20 @@ class Jigglypuff extends React.Component {
     }
 
     this.play = this.play.bind(this)
+    this.stop = this.stop.bind(this)
   }
 
   play() {
     console.log("hi")
     this.props.dispatch(playSong())
-    this.props.dispatch(showAnimation())
+    //this.props.dispatch(showAnimation())
   }  
+
+  stop() {
+    console.log("hi 2")
+    this.props.dispatch(stopSong())
+    //this.props.dispatch(hideAnimation())
+  } 
 
 
   render (props) {
@@ -27,11 +34,13 @@ class Jigglypuff extends React.Component {
     {this.props.jigglepuff.playSong
         ? <div>
             <p>Play song is true</p>
-            
+            <Sound url='/sounds/JIGGLYPUFFSONG.mp3' playStatus={Sound.status.PLAYING} />
+            <img className = 'dancing' src='https://orig00.deviantart.net/cc1a/f/2011/294/6/b/singing_jigglypuff_by_davenevanxaviour-d4dhwp3.jpg'/>
+            <button onClick = {this.stop}>Stop !!</button>
           </div>
         : <div>
             <p>Play song is false</p>
-            <Sound url='' playStatus={Sound.status.PLAYING} />
+            <img className = 'notDancing' src='https://orig00.deviantart.net/cc1a/f/2011/294/6/b/singing_jigglypuff_by_davenevanxaviour-d4dhwp3.jpg'/>
             <button onClick = {this.play}>Play !!</button>
           </div>
     }
