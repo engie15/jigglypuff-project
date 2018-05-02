@@ -19,6 +19,7 @@ class Jigglypuff extends React.Component {
   play() {
     console.log("hi")
     this.props.dispatch(playSong())
+    
     //this.props.dispatch(showAnimation())
   }  
 
