@@ -2,12 +2,12 @@ exports.seed = (knex, Promise) => {
     return knex('Users').del()
     .then(function() {
         return knex('Users').insert([
-            {name: 'Rosie',
-            hash: 'squirtle'},
+            {name: 'Ross',
+            hash: '$2b$12$uYwE0raHZQW2pXjaG8nt3.knKB.NzqPrW7R3SssV9vfLe9Da5QIDG'},
             {name: 'Steve',
-            hash: 'bulbasaur'},
+            hash: '$2b$12$uYwE0raHZQW2pXjaG8nt3.knKB.NzqPrW7R3SssV9vfLe9Da5QIDG'},
             {name: 'Engie',
-            hash: 'pikachu'}
+            hash: '$2b$12$uYwE0raHZQW2pXjaG8nt3.knKB.NzqPrW7R3SssV9vfLe9Da5QIDG'}
         ])
     })
 }

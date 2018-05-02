@@ -1,7 +1,7 @@
 
-initialJigglepuff = {
-    playSong: true,
-    showAnimation: true
+const initialJigglepuff = {
+    playSong: false,
+    showAnimation: false
 }
 
 const jigglepuff = (state = initialJigglepuff, action) => {

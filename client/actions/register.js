@@ -2,13 +2,13 @@ import request from 'superagent'
 import {saveUserToken} from '../utils/auth'
 import {receiveLogin} from './login'
 
-export function registerUserRequest ({user_name, password}) {
-  global.window.localStorage.setItem('fun', 'times')
+export function registerUserRequest ({name, password}) { 
+  // global.window.localStorage.setItem('fun', 'times')
   return (dispatch) => {
     request
-      .post('/api/auth/register')
+      .post('/api/v1/auth/register') 
       .send({
-        user_name, password
+        name, password
       })
       .end((err, res) => {
         if (err) {
