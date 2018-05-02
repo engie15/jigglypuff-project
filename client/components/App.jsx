@@ -10,7 +10,7 @@ import Register from './Register'
 const App = () => (
   <Router>
     <div>
-      <h1>Kia ora beautiful world</h1>
+      <h1>Having Trouble Sleeping??</h1>
       <Route path = '/' component = {LandingPage} />
       <Route path = '/login' component = {Login} />
       <Route path = '/register' component = {Register} /> 
